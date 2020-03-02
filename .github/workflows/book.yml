@@ -1,0 +1,40 @@
+name: CI/CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [13.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+      - name: 安装gitbook及插件
+        run: |
+            npm install  -g gitbook-cli
+            npm install -g gitbook-summary
+            gitbook -v
+            gitbook install
+      - name: 生成_book
+        run: |
+            book sm
+            gitbook build
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+            ARGS: "-avz --delete"
+            SOURCE: "_book/."
+            REMOTE_HOST: ${{ secrets.HOST }}
+            REMOTE_USER: ${{ secrets.USER }}
+            TARGET: ${{ secrets.TARGET }}

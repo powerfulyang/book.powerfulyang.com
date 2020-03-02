@@ -1,0 +1,10 @@
+.gitbook-link {
+    display: none !important;
+}
+input[type=checkbox]{
+  margin-right: 0.5em;
+}
+table {
+  display: block;
+  width: 100%;
+}

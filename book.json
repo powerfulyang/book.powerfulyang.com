@@ -1,0 +1,68 @@
+{
+  "author": "powerfulyang",
+  "description": "This is a sample book created by gitbook",
+  "extension": null,
+  "generator": "site",
+  "ignores": ["node_modules","_book"],
+  "links": {
+    "sharing": {
+      "all": null,
+      "facebook": null,
+      "google": null,
+      "twitter": null,
+      "weibo": null
+    }
+  },
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "output": null,
+  "pdf": {
+    "fontSize": 12,
+    "footerTemplate": null,
+    "headerTemplate": null,
+    "margin": {
+      "bottom": 36,
+      "left": 62,
+      "right": 62,
+      "top": 36
+    },
+    "pageNumbers": false,
+    "paperSize": "a4"
+  },
+  "plugins": [
+    "todo",
+    "advanced-emoji",
+    "terminal",
+    "-lunr",
+    "-search",
+    "search-pro",
+    "insert-logo",
+    "spoiler",
+    "simple-page-toc",
+    "favicon"
+  ],
+  "pluginsConfig": {
+    "theme-default": {
+      "showLevel": true
+    },
+    "terminal": {
+      "copyButtons": true,
+      "fade": false,
+      "style": "flat"
+    },
+    "insert-logo": {
+      "url": "/images/8e8d76cc.png",
+      "style": "background: none; width:99%;"
+    },
+    "simple-page-toc": {
+      "maxDepth": 3,
+      "skipFirstH1": true
+    },
+    "favicon": {
+      "shortcut": "/favicon.ico"
+    }
+  },
+  "title": "2019",
+  "variables": {}
+}
