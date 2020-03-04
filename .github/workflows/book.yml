@@ -18,7 +18,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package.json') }}
       - name: 安装gitbook及插件
         run: |
             npm install  -g gitbook-cli
@@ -37,4 +37,4 @@ jobs:
             SOURCE: "_book/."
             REMOTE_HOST: ${{ secrets.HOST }}
             REMOTE_USER: ${{ secrets.USER }}
-            TARGET: ${{ secrets.TARGET }}
+            TARGET: /root/app/www/book.powerfulyang.com/

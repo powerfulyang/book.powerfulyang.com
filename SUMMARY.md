@@ -1,19 +1,18 @@
 # 2019
 
 - Book
-  - [Leetcode](book/leetcode/README.md)
+  - Css
+    * [Flex](book/css/flex.md)
+    * [Z Index](book/css/zIndex.md)
   - [Linux](book/linux/README.md)
+    * [acme.sh](book/linux/acme.sh.md)
     * [Disk](book/linux/disk.md)
+    * [Docker](book/linux/docker.md)
     * [Nohup](book/linux/nohup.md)
-  - Nestjs
-    * [Type ORM](book/nestjs/TypeORM.md)
-  - [Nginx](book/nginx/README.md)
-  - [React](book/react/README.md)
-  - [Rust](book/rust/README.md)
-  - [TCP](book/TCP/README.md)
-  - [Tips](book/tips/README.md)
+    * [SSH](book/linux/SSH.md)
+  - Mysql
+    - 锁
+      * [乐观锁](book/mysql/锁/乐观锁.md)
+  - [OSI](book/OSI/README.md)
   - [Typescript](book/typescript/README.md)
-    * [Type Define](book/typescript/TypeDefine.md)
-    * [Type ORM](book/typescript/TypeORM.md)
 * [GIT](GIT.md)
-* [TODO](TODO.md)

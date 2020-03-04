@@ -1,19 +1,5 @@
 :apple:
 
-# js
-## 判断js引用类型
-+ 所有的类型
-```javascript
-function typeString(object) {
-  return Object.prototype.toString.call(object).slice(8,-1).toLowerCase();
-}
-```
-+ 对象的 constructor property
-```
-    (1).constructor
-```
-
-## js函数传参
 + 参数问题
 ```javascript
     let a = 1;

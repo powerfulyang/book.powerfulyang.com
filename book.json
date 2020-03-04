@@ -40,7 +40,10 @@
     "insert-logo",
     "spoiler",
     "simple-page-toc",
-    "favicon"
+    "favicon",
+    "-highlight",
+    "prism",
+    "prism-themes"
   ],
   "pluginsConfig": {
     "theme-default": {
@@ -61,6 +64,11 @@
     },
     "favicon": {
       "shortcut": "/favicon.ico"
+    },
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-solarizedlight.css"
+      ]
     }
   },
   "title": "2019",
